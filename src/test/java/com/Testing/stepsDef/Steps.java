@@ -26,6 +26,7 @@ public class Steps {
     SelectFlightPage selectFlightPage = new SelectFlightPage();
     BookAFlightPage bookAFlightPage = new BookAFlightPage();
     FlightConfirmationPage flightConfirmationPage = new FlightConfirmationPage();
+    CruiseSpecialPage cruiseSpecialPage = new CruiseSpecialPage();
 
     @Before
     public void homepage() {
@@ -258,6 +259,20 @@ public class Steps {
 
     @Then("^should view Your itinerary has been booked! message$")
     public void should_view_Your_itinerary_has_been_booked_message() {
+    }
+
+    @When("^user selects Cruises$")
+    public void user_Selects_Cruises() {
+
+        cruiseSpecialPage.selectCruise();
+    }
+
+
+    @Then("^user should be  able to view CRUISE SPECIAL page$")
+    public void user_Should_Be_Able_To_View_CRUISESPECIALPage() {
+        String actual = cruiseSpecialPage.isOnCruiseSpecialPage();
+        assertThat(actual, endsWith("mercurycruise.php"));
+        System.out.println("I am on CRUISE SPECIAL page");
     }
 
 
