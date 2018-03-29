@@ -46,3 +46,7 @@ Feature: As a user i should be able to book a flight
       | Type      | Passengers | Departing From | Arriving Month | Arriving Date | Arriving In | Returning month | Returning Date | Service Class | Airline             | First Name | Last Name | Meal       | Card Type        | Number      | Expiration Month | Expiration year | Middle | Last | Address | City   | State/Province | Postal Code | Country        |
       | RoundTrip | 1          | London         | May            | 2             | New York    | May             | 15             | Business      | Blue Skies Airlines | Vinaya     | M         | Vegetarian | American Express | 12345678910 | 01               | 2010            | D      | M    | Flat 2  | London | London         | IG11XR      | United Kingdom |
 
+  Scenario: User can view Cruise itinerary
+    Given user is on homepage
+    When user selects Cruises
+    Then user should be  able to view CRUISE SPECIAL pagel
