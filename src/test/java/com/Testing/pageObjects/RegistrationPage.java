@@ -21,9 +21,9 @@ public class RegistrationPage extends BasePage {
     }
 
     public void fillForm() {
-        driver.findElement(By.cssSelector("input[name='firstName']")).sendKeys("himabindu");
+        driver.findElement(By.cssSelector("input[name='firstName']")).sendKeys("Vinaya");
         //driver.findElement(By.xpath("html/body/div[1]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td[2]/input")).sendKeys("himabindu");
-        driver.findElement(By.cssSelector("input[name='lastName']")).sendKeys("patlolla");
+        driver.findElement(By.cssSelector("input[name='lastName']")).sendKeys("M");
         WebElement element = driver.findElement(By.cssSelector("select[name='country']"));
         Select select = new Select(element);
         select.selectByVisibleText("UNITED KINGDOM");
